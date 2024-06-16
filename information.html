@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Cleaning Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #76885B;
+            color: white;
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .center-title {
+            text-align: center;
+            margin: 2em 0;
+        }
+
+        .container {
+            display: flex;
+            padding: 2em;
+        }
+
+        .left-column, .right-column {
+            width: 50%;
+            padding: 1em;
+        }
+
+        .left-column {
+            text-align: center;
+        }
+
+        .left-column form input {
+            width: 80%;
+            padding: 0.5em;
+            margin-top: 1em;
+        }
+
+        .right-column {
+            border-left: 2px solid #76885B;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #results {
+            margin-top: 1em;
+            padding: 1em;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="book.html">BOOK NOW</a></li>
+            </ul>
+        </nav>
+        <h1 class="center-title">LUX CLEANING SERVICES</h1>
+    </header>
+    <div class="container">
+        <div class="left-column">
+            <h2>INFORMATION PAGE</h2>
+            <form>
+                <input type="text" id="searchTitle" onkeyup="showSuggest(this.value)" placeholder="Search by title...">
+            </form>
+        </div>
+        <div class="right-column">
+            <h3 class="center">RESULTS</h3>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script>
+        function showSuggest(str) {
+            if (str.length === 0) {
+                document.getElementById("results").innerHTML = "";
+                return;
+            }
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("results").innerHTML = this.responseText;
+                }
+            };
+
+            xhttp.open("GET", "information.php?suggest=" + str, true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>

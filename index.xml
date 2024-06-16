@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Lux Cleaning Services</title>
+        <style>
+            <![CDATA[
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #76885B;
+                color: white;
+                padding: 1em 0;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            nav ul li {
+                display: inline;
+                margin: 0 1em;
+            }
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+            .center-title {
+                text-align: center;
+                margin: 2em 0;
+            }
+            .intro {
+                text-align: center;
+                margin: 2em 0;
+            }
+            .services {
+                text-align: center;
+            }
+            .service-boxes {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .box {
+                width: 200px;
+                height: 150px;
+                margin: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                cursor: pointer;
+            }
+            .deep-cleaning {
+                background-image: url('pic1.jpg');
+            }
+            .window-cleaning {
+                background-image: url('pic2.jpg');
+            }
+            .carpet-cleaning {
+                background-image: url('pic3.jpg');
+            }
+            .apartment-cleaning {
+                background-image: url('pic4.jpg');
+            }
+            .villa-cleaning {
+                background-image: url('pic5.jpg');
+            }
+            .commercial-cleaning {
+                background-image: url('pic6.jpg');
+            }
+            .service-details {
+                display: none;
+                margin: 2em;
+            }
+            .details-container {
+                display: flex;
+                justify-content: space-between;
+            }
+            .text-column {
+                flex: 1;
+                padding: 1em;
+            }
+            .image-column {
+                flex: 1;
+                padding: 1em;
+            }
+            .image-column img {
+                max-width: 100%;
+            }
+            ]]>
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="information.html">INFORMATION</a></li>
+                    <li><a href="gallery.php">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="book.html">BOOK NOW</a></li>
+                </ul>
+            </nav>
+            <h1 class="center-title">LUX CLEANING SERVICES</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <h1>Creating A More Pleasant Environment</h1>
+                <p>We aim to provide high-quality services with customer service. Our cleaning services are customized to fit your specific needs.</p>
+            </section>
+            <section class="services">
+                <h2 class="center-title">ALL SERVICES</h2>
+                <div class="service-boxes">
+                    <div class="box deep-cleaning" onclick="showServiceDetails(1)">Deep Cleaning</div>
+                    <div class="box window-cleaning" onclick="showServiceDetails(2)">Window Cleaning</div>
+                    <div class="box carpet-cleaning" onclick="showServiceDetails(3)">Carpet Cleaning</div>
+                    <div class="box apartment-cleaning" onclick="showServiceDetails(4)">Apartment Cleaning</div>
+                    <div class="box villa-cleaning" onclick="showServiceDetails(5)">Villa Cleaning</div>
+                    <div class="box commercial-cleaning" onclick="showServiceDetails(6)">Commercial Cleaning</div>
+                </div>
+            </section>
+            <section class="service-details" id="service-details">
+                <div class="details-container">
+                    <div class="text-column">
+                        <h3 id="service-title">Sample Title</h3>
+                        <p id="service-description">Sample Description</p>
+                    </div>
+                    <div class="image-column">
+                        <img id="service-image" src="" alt="Service Image"/>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            <![CDATA[
+            function showServiceDetails(serviceId) {
+                const serviceDetails = {
+                    1: {
+                        title: "Deep Cleaning",
+                        description: "Is your regular cleaning not quite cutting it? With Lux's Deep Cleaning, we go beyond the surface to target dust and grime in those hard-to-reach places. Say goodbye to allergies and inflammation caused by hidden dirt. Our seasoned professionals use cutting-edge technologies and eco-friendly products to deliver a top-to-bottom clean for your home or office. Experience the refreshing difference of Lux's meticulous attention to detail.",
+                        image: "pic7.jpg"
+                    },
+                    2: {
+                        title: "Window Cleaning",
+                        description: "Discover the brilliance of perfectly clean windows with Lux Service. Our experts use advanced window cleaning technology, including ladder-assisted cleaning, squeegees, and specialty solutions, to leave your windows sparkling. Enjoy a streak-free view and the confidence of knowing our team is always ready to address your unique needs. Choose Lux for unparalleled window cleaning results.",
+                        image: "pic8.jpg"
+                    },
+                    3: {
+                        title: "Carpet Cleaning",
+                        description: "Transform your carpets with Lux's specialized cleaning services for both homes and businesses. Utilizing state-of-the-art steam cleaning, stain removal, and pet odor elimination, we rejuvenate your carpets with safe, eco-friendly methods. Our dedicated professionals ensure high-quality service, leaving your carpets looking and feeling brand new. Satisfaction guaranteed—contact us today to revitalize your space.",
+                        image: "pic9.jpg"
+                    },
+                    4: {
+                        title: "Apartment Cleaning",
+                        description: "Elevate your living space with Lux's professional apartment cleaning. Our customizable packages ensure a dust-free, allergen-free environment, promoting better health for you and your family. Regular cleaning not only enhances the appearance of your apartment but also extends the lifespan of your appliances and fixtures. Trust Lux's commitment to excellence for a spotless, enjoyable home.",
+                        image: "pic10.jpg"
+                    },
+                    5: {
+                        title: "Villa Cleaning",
+                        description: "Maintain a pristine and healthy villa with Lux Cleaning. Our comprehensive services remove dust, allergens, and prevent mold buildup, ensuring a safe living environment. With eco-friendly products and customizable cleaning schedules, we cater to your specific needs. Experience the exceptional quality of Lux's villa cleaning for a welcoming, fresh home.",
+                        image: "pic11.jpg"
+                    },
+                    6: {
+                        title: "Commercial Cleaning",
+                        description: "Choose Lux Cleaning for top-tier commercial and construction site cleaning. Our expert team, equipped with high-quality products and tools, ensures your site is spotless and safe. From office to retail cleaning, we offer customizable packages to meet your needs. Enjoy peace of mind with our eco-friendly approach, safeguarding both your employees and the environment. Simplify your cleaning with Klarity's reliable and professional services.",
+                        image: "pic12.jpg"
+                    }
+                };
+                const details = serviceDetails[serviceId];
+                document.getElementById('service-title').innerText = details.title;
+                document.getElementById('service-description').innerText = details.description;
+                document.getElementById('service-image').src = details.image;
+                document.getElementById('service-details').style.display = 'block';
+                document.getElementById('service-details').scrollIntoView({ behavior: 'smooth' });
+            }
+            ]]>
+        </script>
+    </body>
+</website>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Cleaning Services - Book Now</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="book.html">BOOK NOW</a></li>
+            </ul>
+        </nav>
+        <h1 class="center-title">LUX CLEANING SERVICES</h1>
+    </header>
+
+    <div class="form-container">
+        <form action="book_service.php" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Choose Your Service</label>
+                    <select id="service" name="service" required>
+                        <option value="Deep Cleaning">Deep Cleaning</option>
+                        <option value="Window Cleaning">Window Cleaning</option>
+                        <option value="Carpet Cleaning">Carpet Cleaning</option>
+                        <option value="Apartment Cleaning">Apartment Cleaning</option>
+                        <option value="Villa Cleaning">Villa Cleaning</option>
+                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">BOOK SERVICE</button>
+        </form>
+    </div>
+</body>
+</html>

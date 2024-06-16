@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #76885B;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.center-title {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+form {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.form-group {
+    flex: 1;
+    margin: 0 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: #76885B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a6847;
+}
+
+/* Confirmation message styles */
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 0;
+}
+
+.confirmation-box {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.confirmation-message {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.receipt {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.receipt-item {
+    margin: 0.5em 0;
+}
+
+.book-again-button {
+    background-color: #76885B; /* Green */
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.book-again-button:hover {
+    background-color: #45a049;
+}

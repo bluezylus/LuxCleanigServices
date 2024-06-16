@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Lux Cleaning Services</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
+                <li><a href="gallery.php">GALLERY</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="book.html">BOOK NOW</a></li>
+            </ul>
+        </nav>
+        <h1 class="center-title">LUX CLEANING SERVICES</h1>
+    </header>
+
+    <main>
+        <section class="about-us-section">
+            <h1>About Us</h1>
+        </section>
+
+        <section class="mission-section">
+            <h1>Mission</h1>
+            <p>At Lux Cleaning Services, our mission is to provide exceptional cleaning solutions that not only meet but exceed our clients' expectations. We are dedicated to creating immaculate and healthy environments through our professional, reliable, and eco-friendly cleaning services. Our commitment to quality, attention to detail, and customer satisfaction drives us to deliver the best possible experience, ensuring that every space we clean is a testament to our passion for excellence and integrity.</p>
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact No.</h2>
+            <p>123-456-7890</p>
+        </section>
+
+        <section class="founder-section">
+            <h2>Founder</h2>
+            <div class="founder-details">
+                <div class="founder-image">
+                    <img src='founder.jpg' alt="Jayzelyn Laxa">
+                </div>
+                <div class="founder-info">
+                    <p>Name: Jayzelyn Rodriguez Laxa</p>
+                    <p>Age: 21</p>
+                    <p>Year: 2nd Year</p>
+                    <p>Section: NW2A</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>Find Us</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHcqT71gw8I1TSB1jCyrbbZw6TzRmJGPM&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = {lat: 14.7779, lng: 120.5436}; // Coordinates for Samal, Bataan
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>
